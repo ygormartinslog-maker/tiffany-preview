@@ -34,7 +34,8 @@ p {
 
 .hero {
     /* Updated hero background to complement the refined layout */
-    background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1400&q=80');
+    /* Use the provided hero image cropped from the user-supplied photo */
+    background-image: url('hero.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
