@@ -1,0 +1,258 @@
+/* Global styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+    color: #f5f5f5;
+    background-color: #0b0b0b;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    margin: 0 0 1rem;
+    color: #f5f5f5;
+}
+
+p {
+    line-height: 1.6;
+    margin: 0 0 1rem;
+}
+
+.section {
+    padding: 4rem 2rem;
+}
+
+.section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #d4af37;
+}
+
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    letter-spacing: 4px;
+    color: #d4af37;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #f5f5f5;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn {
+    background-color: #d4af37;
+    color: #0b0b0b;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #eacb74;
+    color: #0b0b0b;
+}
+
+.btn-outline:hover, .btn-outline:focus {
+    background-color: #d4af37;
+    color: #0b0b0b;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #d4af37;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #d4af37;
+}
+
+.about, .tour, .booking, .contact {
+    background-color: #151515;
+}
+
+.tour-list {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tour-list li {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    height: 250px;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.booking-form label {
+    font-weight: 500;
+    color: #d4af37;
+}
+
+.booking-form input, .booking-form textarea {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2b2b2b;
+    color: #f5f5f5;
+    font-size: 1rem;
+}
+
+.booking-form textarea {
+    resize: vertical;
+}
+
+.booking-form button {
+    align-self: start;
+}
+
+.contact a {
+    color: #d4af37;
+}
+
+.footer {
+    padding: 1rem 2rem;
+    text-align: center;
+    background-color: #0b0b0b;
+    font-size: 0.8rem;
+    color: #777;
+    border-top: 1px solid #222;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
